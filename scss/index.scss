@@ -25,13 +25,17 @@ body {
 .container {
   margin: 0 auto;
   max-width: 620px;
+
+  @media (width < 630px) {
+    max-width: 90%;
+  }
 }
 
 .wrapper {
   $width: 1000px;
   display: flex;
   flex-direction: column;
-  width: $width;
+  max-width: $width;
   background-image: linear-gradient(
       180deg,
       rgba(19, 19, 22, 0) 0%,
