@@ -2,14 +2,12 @@
   font-family: "Segoe UI";
   font-weight: 700;
   src: local("Segoe UI Bold"),
-    url(../fonts/inter/inter-variable.ttf) format("truetype"),
-    url(../fonts/inter/static/inter-light-300.ttf) format("truetype");
+    url(../fonts/segoe_ui/segoe_ui_bold.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "Segoe UI";
   font-weight: 400;
   src: local("Segoe UI Regular"),
-    url(../fonts/inter/inter-variable.ttf) format("truetype"),
-    url(../fonts/inter/static/inter-regular-400.ttf) format("truetype");
+    url(../fonts/segoe_ui/segoe_ui_regular.ttf) format("truetype");
 }

@@ -1,0 +1,42 @@
+.main {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &_new {
+    & h2 {
+      margin: 23px 0px;
+      font-size: 32px;
+      line-height: 42px;
+      @include font-primary-regular;
+      letter-spacing: 0.6px;
+      color: $color-bright;
+      text-align: center;
+    }
+
+    &__inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
+
+  &_promo {
+    & h2 {
+      margin: 23px 0px;
+      font-size: 32px;
+      line-height: 42px;
+      @include font-primary-regular;
+      color: $color-bright;
+      text-align: center;
+    }
+
+    &__inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
+}

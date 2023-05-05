@@ -1,0 +1,26 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    87.23deg,
+    #801ab300 -91.42%,
+    #801ab355 5%,
+    #4c4cff 99.79%
+  );
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 40px;
+  min-width: 180px;
+  font-size: 16px;
+  line-height: 21px;
+  @include font-primary-regular;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: $color-bright;
+
+  &-big {
+    height: 60px;
+  }
+}

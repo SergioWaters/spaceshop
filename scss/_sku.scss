@@ -1,199 +1,234 @@
-.card {
+.sku {
   display: flex;
+  align-items: center;
   flex-direction: column;
-  min-width: 0;
-  padding: 20px;
-  color: #303030;
-  background-color: #fff;
-  border: 1px solid #f0f0f0;
-  min-width: 310px;
-  position: relative;
-  transition: $transition;
+  box-sizing: border-box;
+  border-radius: $border-radius;
+  background-color: $color-bright;
 
-  &_icons {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+  .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & img {
+      object-fit: contain;
+    }
+  }
+
+  .info {
+    padding: 0 10px;
     display: flex;
     flex-direction: column;
-    z-index: 98;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
 
-    & .card_icon {
-      margin: 5px;
-    }
-  }
-
-  &_promos {
-    display: flex;
-    color: #fff;
-    min-height: 25px;
-
-    & .promo {
-      &.black {
-        background-color: #495159;
-      }
-
-      &.yellow {
-        background-color: #e1a661;
-      }
-
-      &.green {
-        background-color: #5b8a8f;
-      }
-    }
-  }
-
-  &_slider {
-    min-width: 0;
-    display: flex;
-    width: 200px;
-    height: 200px;
-
-    &_wrapper {
-      display: flex;
-      justify-content: center;
-      position: relative;
-      margin: 0 0 26px 0;
+    .title {
+      @include font-primary-regular;
+      font-size: 16px;
+      line-height: 20px;
     }
 
-    &__pagination {
-      display: flex;
-      justify-content: center;
-      position: absolute;
-      display: flex;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-
-      & .slick-dots {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      & .slick-dots li {
-        font-size: 0;
-        list-style: none;
-        margin: 0px 4px;
-      }
-
-      & .slick-dots li button {
-        border: 1px solid #303030;
-        border-radius: 50%;
-        height: 8px;
-        width: 8px;
-        background-color: transparent;
-        cursor: pointer;
-      }
-
-      & .slick-dots li.slick-active button {
-        background-color: #303030;
-        border: none;
-      }
-    }
-
-    & .slick-list {
+    .text {
+      $height: 21px;
+      height: $height * 3;
       overflow: hidden;
+      @include font-primary-regular;
+      font-size: 16px;
+      line-height: $height;
     }
 
-    & .slick-track {
+    & .price {
       display: flex;
-    }
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+      font-size: 24px;
+      line-height: 32px;
 
-  }
+      &_old {
+        position: relative;
+        color: #d9d9d9;
+        font-size: 16px;
+        line-height: 32px;
 
-  &_price {
-    font-size: 18px;
-    line-height: 18px;
-    font-weight: 600;
-    display: flex;
-    align-items: end;
-    position: relative;
-    min-height: 22px;
+        &::after {
+          content: "";
+          position: absolute;
+          height: 1px;
+          width: 100%;
+          top: 50%;
+          left: 0;
+          background-color: #d9d9d9;
+        }
+      }
 
-    &-old {
-      color: #8f8f8f;
-      font-size: 14px;
-      line-height: 14px;
-      font-weight: 400;
-      margin: 0 0 0 8px;
-      position: relative;
-    }
+      &_new {
+        @include font-primary-bold;
+      }
 
-    &-old::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 1.5px;
-      background-color: #8f8f8f;
-      top: 50%;
-      left: 0;
-    }
-
-    & .promo {
-      background-color: #e24b33;
-      color: #fff;
-      right: 0;
-      position: absolute;
+      & span {
+        text-align: center;
+      }
     }
   }
 
-  &_description {
-    margin: 16px 0 20px 0;
-    font-size: 14px;
-    line-height: 22px;
-    font-weight: 400;
-    font-family: Inter;
+  & .button {
+    margin: 9px 0;
   }
 
-  &:hover .dropdown {
-    display: flex;
+  &.small {
+    width: 200px;
+
+    & .image {
+      height: 150px;
+    }
+
+    & .price {
+      gap: 50px;
+    }
   }
 
-  & .dropdown {
-    width: 100%;
-    background-color: #f0f0f0;
-    margin: 4px 0;
-    display: none;
+  &.medium {
+    width: 305px;
 
-    &-selected {
-      position: relative;
+    & .image {
+      height: 180px;
+    }
 
-      &::after {
-        content: '';
-        position: absolute;
-        width: 5px;
-        height: 5px;
-        border-bottom: 2px solid #000;
-        border-right: 2px solid #000;
-        transform: rotate(45deg);
-        right: 17px;
-        top: 15px;
+    & .price {
+      gap: 50px;
+    }
+
+    & .button {
+      width: 285px;
+    }
+  }
+
+  &.large {
+    width: 620px;
+
+    & .description {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      & .image {
+        width: 305px;
+
+        & img {
+          height: 305px;
+          transform: scale(143%);
+          transform-origin: 130px 160px;
+        }
+      }
+
+      & .info {
+        padding: 30px 65px 0 10px;
+        align-items: start;
+        text-align: left;
+        gap: 0;
+
+        & .rating {
+          display: flex;
+          justify-content: start;
+          gap: 8px;
+          margin-bottom: 10px;
+
+          & img {
+            width: 28px;
+            height: 28px;
+            opacity: 0.1;
+
+            &.checked {
+              opacity: 1;
+            }
+          }
+        }
+
+        & .title {
+          font-size: 16px;
+          line-height: 32px;
+        }
+
+        & .text {
+          font-size: 13px;
+          line-height: 17px;
+          letter-spacing: 0.2px;
+          height: 52px;
+        }
+
+        & .price {
+          justify-content: space-between;
+          margin-bottom: 28px;
+          width: 100%;
+
+          & span {
+            font-size: 16px;
+            line-height: 21px;
+
+            &.badge {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              @include font-primary-bold;
+              text-align: center;
+              color: $color-bright;
+              background-color: $color-red;
+              border-radius: $border-radius;
+              height: 24px;
+              width: 60px;
+            }
+          }
+        }
+
+        & .discount {
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          width: 100%;
+
+          & li {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            line-height: 17px;
+            @include font-primary-regular;
+            letter-spacing: 0;
+
+            & .descr {
+              flex: 1;
+            }
+
+            & .amount {
+              text-align: right;
+            }
+
+            & .red {
+              color: $color-red;
+            }
+          }
+        }
       }
     }
 
-    &-checkbox {
-      display: none;
+    & .button,
+    & .promocode {
+      margin: 0 0 35px 0;
+      width: 280px;
+      height: 60px;
     }
 
-    // &-list {}
-
-    // &-list-item {}
-  }
-
-  &:hover {
-    box-shadow: 0 16px 32px #0000001A;
-    transition: $transition;
-  }
-}
-
-@media (max-width: 770px) {
-  .card {
-    box-shadow: 0 16px 32px #0000001A;
-  }
-
-  .card .dropdown {
-    display: flex;
-
+    & .promocode {
+      background: transparent;
+      border: 1px dashed $color-dark;
+      @include font-primary-bold;
+      letter-spacing: 0.5px;
+      color: $color-dark;
+      margin: 0 0 10px 0;
+    }
   }
 }

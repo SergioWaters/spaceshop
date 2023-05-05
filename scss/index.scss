@@ -1,17 +1,3 @@
-@import './normalize';
-@import './fonts';
-@import './burger';
-@import './vars';
-@import './ui-kit';
-@import './sku';
-@import './header';
-@import './main-promo';
-@import './main-popular';
-@import './main-sale';
-@import './main-sale-ads';
-@import './main-daily';
-@import './main_articles';
-
 *,
 *::after,
 *::before {
@@ -20,32 +6,42 @@
   padding: 0;
 }
 
-body {
-  background-color: #484848;
-}
+@import "./normalize";
+@import "./fonts";
+@import "./vars";
+@import "./button";
+@import "./sku";
+@import "./logo";
+@import "./header";
+@import "./main";
+@import "./footer";
 
-.wrapper {
-  background-color: #fff;
-  color: $primarycolor;
-  font-size: 14px;
-  @include font-inter-400;
-  max-width: 1920px;
-  margin: 0 auto;
+body {
+  background-color: $color-dark;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
   margin: 0 auto;
-  max-width: 1300px;
+  max-width: 620px;
 }
 
-.main section {
-  margin: 120px 0 0 0;
+.wrapper {
+  $width: 1000px;
+  display: flex;
+  flex-direction: column;
+  width: $width;
+  background-image: linear-gradient(
+      180deg,
+      rgba(19, 19, 22, 0) 0%,
+      $color-dark 100%
+    ),
+    url("../images/bg.jpeg");
+  background-size: $width 40%, $width;
+  background-repeat: no-repeat, no-repeat;
+}
 
-  @media (max-width: 1300px) {
-    padding: 0 10px;
-  }
-
-  @media (max-width: 770px) {
-    margin: 60px 0 0 0;
-  }
+.main {
+  flex: 1;
 }
