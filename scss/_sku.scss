@@ -135,6 +135,15 @@
           transform: scale(143%);
           transform-origin: 130px 160px;
         }
+        @media (width < 630px) {
+          width: 100%;
+
+          & img {
+            height: auto;
+            transform: none;
+            object-fit: contain;
+          }
+        }
       }
 
       & .info {

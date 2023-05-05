@@ -616,6 +616,19 @@ template {
       -ms-transform-origin: 130px 160px;
           transform-origin: 130px 160px;
 }
+@media (width < 630px) {
+  .sku.large .description .image {
+    width: 100%;
+  }
+  .sku.large .description .image img {
+    height: auto;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
 .sku.large .description .info {
   padding: 30px 65px 0px 10px;
   -webkit-box-align: start;
