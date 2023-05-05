@@ -19,8 +19,18 @@
   letter-spacing: 0.6px;
   text-transform: uppercase;
   color: $color-bright;
+  cursor: pointer;
 
   &-big {
     height: 60px;
+  }
+
+  &:hover {
+    background: linear-gradient(
+      0deg,
+      #801ab300 -91.42%,
+      #801ab355 5%,
+      #4c4cff 99.79%
+    );
   }
 }

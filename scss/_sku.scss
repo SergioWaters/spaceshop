@@ -13,6 +13,12 @@
 
     & img {
       object-fit: contain;
+      transition: $transition-duration;
+
+      &:hover {
+        transform: scale(110%);
+        transition: $transition-duration;
+      }
     }
   }
 

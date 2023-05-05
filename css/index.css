@@ -435,9 +435,15 @@ template {
   letter-spacing: 0.6px;
   text-transform: uppercase;
   color: #ffffff;
+  cursor: pointer;
 }
 .button-big {
   height: 60px;
+}
+.button:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(-91.42%, rgba(128, 26, 179, 0)), color-stop(5%, rgba(128, 26, 179, 0.3333333333)), color-stop(99.79%, #4c4cff));
+  background: -o-linear-gradient(bottom, rgba(128, 26, 179, 0) -91.42%, rgba(128, 26, 179, 0.3333333333) 5%, #4c4cff 99.79%);
+  background: linear-gradient(0deg, rgba(128, 26, 179, 0) -91.42%, rgba(128, 26, 179, 0.3333333333) 5%, #4c4cff 99.79%);
 }
 
 .sku {
@@ -470,6 +476,17 @@ template {
 .sku .image img {
   -o-object-fit: contain;
      object-fit: contain;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.sku .image img:hover {
+  -webkit-transform: scale(110%);
+      -ms-transform: scale(110%);
+          transform: scale(110%);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 .sku .info {
   padding: 0 10px;
