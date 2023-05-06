@@ -979,7 +979,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 1000px;
+  width: 1000px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(19, 19, 22, 0)), to(#131316)), url("../images/bgall.jpg");
   background-image: -o-linear-gradient(top, rgba(19, 19, 22, 0) 0%, #131316 100%), url("../images/bgall.jpg");
   background-image: linear-gradient(180deg, rgba(19, 19, 22, 0) 0%, #131316 100%), url("../images/bgall.jpg");

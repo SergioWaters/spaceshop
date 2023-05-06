@@ -35,7 +35,7 @@ body {
   $width: 1000px;
   display: flex;
   flex-direction: column;
-  max-width: $width;
+  width: $width;
   background-image: linear-gradient(
       180deg,
       rgba(19, 19, 22, 0) 0%,
